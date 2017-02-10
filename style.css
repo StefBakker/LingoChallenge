@@ -1,0 +1,102 @@
+
+*{
+	font-family: arial;
+}
+
+h1{
+	text-align: center;
+}
+
+body{
+	background-color: white;
+}
+
+#lingo{
+	  margin: 0 auto;
+}
+
+.main{
+	font-size: 50px;
+	width: 140px;
+	height: 80px;
+	text-align: center;
+	text-transform: capitalize;	
+	font-weight: bold;
+}
+.rij1{
+	font-size: 50px;
+	width: 140px;
+	height: 80px;
+	text-align: center;
+	text-transform: capitalize;	
+	font-weight: bold;
+}
+
+.rij2{
+	font-size: 50px;
+	width: 140px;
+	height: 80px;
+	text-align: center;
+	text-transform: capitalize;	
+	font-weight: bold;	
+}
+
+.rij3{
+	font-size: 50px;
+	width: 140px;
+	height: 80px;
+	text-align: center;
+	text-transform: capitalize;	
+	font-weight: bold;
+}
+
+.rij4{
+	font-size: 50px;
+	width: 140px;
+	height: 80px;
+	text-align: center;
+	text-transform: capitalize;	
+	font-weight: bold;	
+}
+
+.rij5{
+	font-size: 50px;
+	width: 140px;
+	height: 80px;
+	text-align: center;
+	text-transform: capitalize;	
+	font-weight: bold;	
+}
+
+.main{
+	background-color: green;
+	color: black;
+}
+
+#main2{
+	background-color: green;
+	color: black;
+}
+
+#main3{
+	background-color: green;
+	color: black;
+}
+
+#main4{
+	background-color: green;
+	color: black;
+}
+
+#main5{
+	background-color: green;
+	color: black;
+}
+#checkbutton{
+	text-align: center;
+}
+
+#logo{
+	height: 100px;
+    width: 40%;
+}
