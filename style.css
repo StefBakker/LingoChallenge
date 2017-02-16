@@ -1,4 +1,4 @@
-/* Header */
+/* Main */
 *{
 	font-family: arial;
 }
@@ -42,7 +42,7 @@ p{
 
 }
 
-/* Alle rijen */
+/* Rijen style */
 .rij1{
 	font-size: 50px;
 	width: 140px;

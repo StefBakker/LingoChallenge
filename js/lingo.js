@@ -23,12 +23,12 @@ var vierdelettercorrect = document.getElementById("1_4");
 var vijfdelettercorrect = document.getElementById("1_5");
 var counter = 0;
 
-
+/* Load function when website open's */
 window.onload = function(){
 }
 
+/* Check Button */
 function check(){
-	console.log(eersteletter);
 		eerstelettergroen = document.getElementById(poging + '_1');
 		tweedelettergroen = document.getElementById(poging + '_2');
 		derdelettergroen = document.getElementById(poging + '_3');
@@ -39,7 +39,6 @@ function check(){
 		derdeletters = document.getElementById(poging + '_3').value;
 		vierdeletters = document.getElementById(poging + '_4').value;
 		vijfdeletters = document.getElementById(poging + '_5').value;
-		console.log(tweedeletters);
 		checkLetterById(tweedeletter, poging + '_2');
 		checkLetterById(derdeletter, poging + '_3');
 		checkLetterById(vierdeletter, poging + '_4');
@@ -50,20 +49,27 @@ function check(){
 		
 }
 
+/* Reset Button */
+function refresh(){
+	location.reload();
+}
+
+/* Check letter */
 function checkLetterById(letterToCheck, LetterId) {
 
 		var letterElement = document.getElementById(LetterId);
-		if (letterElement.value == letterToCheck){
+		if (letterElement.value === letterToCheck){
 				letterElement.style.backgroundColor = "green";
 		}
 		else if (letterElement.value != letterToCheck){
 				letterElement.style.backgroundColor = "red";
 			}
 		else{
-				letterElement.style.backgroundColor = "white";
+				letterElement.style.backgroundColor = "yellow";
 		}
 }
 
+/* Good/Bad Sound */
 function checkCorrectAnswer(){
 	if (eerstelettergroen.style.backgroundColor == "green" && tweedelettergroen.style.backgroundColor == "green" && derdelettergroen.style.backgroundColor == "green" && vierdelettergroen.style.backgroundColor == "green" && vijfdelettergroen.style.backgroundColor == "green"){
 		var audiogoed = new Audio('sounds/lingo_correct.mp3');
