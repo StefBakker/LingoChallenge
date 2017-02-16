@@ -27,24 +27,27 @@ var counter = 0;
 window.onload = function(){
 }
 
-function play(){
-               var audio = document.getElementById("audio");
-               audio.play();
-}
-
 function check(){
 	console.log(eersteletter);
+		eerstelettergroen = document.getElementById(poging + '_1');
+		tweedelettergroen = document.getElementById(poging + '_2');
+		derdelettergroen = document.getElementById(poging + '_3');
+		vierdelettergroen = document.getElementById(poging + '_4');
+		vijfdelettergroen = document.getElementById(poging + '_5');
+
 		tweedeletters = document.getElementById(poging + '_2').value;
 		derdeletters = document.getElementById(poging + '_3').value;
 		vierdeletters = document.getElementById(poging + '_4').value;
 		vijfdeletters = document.getElementById(poging + '_5').value;
 		console.log(tweedeletters);
-		checkLetterById(tweedeletter, '1_2');
-		checkLetterById(derdeletter, '1_3');
-		checkLetterById(vierdeletter, '1_4');
-		checkLetterById(vijfdeletter, '1_5');
+		checkLetterById(tweedeletter, poging + '_2');
+		checkLetterById(derdeletter, poging + '_3');
+		checkLetterById(vierdeletter, poging + '_4');
+		checkLetterById(vijfdeletter, poging + '_5');
+		checkCorrectAnswer();
 		poging ++;
 		console.log(poging)
+		
 }
 
 function checkLetterById(letterToCheck, LetterId) {
@@ -52,14 +55,22 @@ function checkLetterById(letterToCheck, LetterId) {
 		var letterElement = document.getElementById(LetterId);
 		if (letterElement.value == letterToCheck){
 				letterElement.style.backgroundColor = "green";
-				play();
 		}
 		else if (letterElement.value != letterToCheck){
 				letterElement.style.backgroundColor = "red";
-				play();
 			}
 		else{
 				letterElement.style.backgroundColor = "white";
-				play();
 		}
+}
+
+function checkCorrectAnswer(){
+	if (eerstelettergroen.style.backgroundColor == "green" && tweedelettergroen.style.backgroundColor == "green" && derdelettergroen.style.backgroundColor == "green" && vierdelettergroen.style.backgroundColor == "green" && vijfdelettergroen.style.backgroundColor == "green"){
+		var audiogoed = new Audio('sounds/lingo_correct.mp3');
+		audiogoed.play();
+	}
+	else{
+		var audio = new Audio('sounds/lingo_correct_letter.mp3');
+		audio.play();
+	}
 }
