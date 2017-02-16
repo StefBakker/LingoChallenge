@@ -1,4 +1,4 @@
-
+/* Header */
 *{
 	font-family: arial;
 }
@@ -8,9 +8,25 @@ h1{
 }
 
 body{
-	background-color: white;
+	background-color: #D8D8D8;
 }
 
+p{
+	text-align: center;
+}
+
+#logo{
+	height: auto;
+	width: auto;
+    max-width: 45%;
+    max-height: 135px;
+}
+
+.buttonlocation{
+	text-align: center;
+}
+
+/* The Game */
 #lingo{
 	  margin: 0 auto;
 }
@@ -22,7 +38,11 @@ body{
 	text-align: center;
 	text-transform: capitalize;	
 	font-weight: bold;
+	background-color: green;
+
 }
+
+/* Alle rijen */
 .rij1{
 	font-size: 50px;
 	width: 140px;
@@ -66,37 +86,4 @@ body{
 	text-align: center;
 	text-transform: capitalize;	
 	font-weight: bold;	
-}
-
-.main{
-	background-color: green;
-	color: black;
-}
-
-#main2{
-	background-color: green;
-	color: black;
-}
-
-#main3{
-	background-color: green;
-	color: black;
-}
-
-#main4{
-	background-color: green;
-	color: black;
-}
-
-#main5{
-	background-color: green;
-	color: black;
-}
-#checkbutton{
-	text-align: center;
-}
-
-#logo{
-	height: 100px;
-    width: 40%;
 }
