@@ -2,9 +2,9 @@
 var poging = 1;
 var word = words[Math.floor(Math.random()*words.length)];
 var correctAnswer = word;
-var right = document.getElementsByClassName('main');
-for (var i = 0, len = right.length; i < len; i++) {
-	right[i].value = word[0];
+var goedebeginletter = document.getElementsByClassName('main');
+for (var i = 0, len = goedebeginletter.length; i < len; i++) {
+	goedebeginletter[i].value = word[0];
 }
 console.log(correctAnswer)
 
@@ -15,17 +15,15 @@ var tweedeletter = word.substring(1,2);
 var derdeletter = word.substring(2,3);
 var vierdeletter = word.substring(3,4);
 var vijfdeletter = word.substring(4,5);
+var zesdeletter = word.substring(5,6);
 
 /* Correcte Letters */
 var tweedelettercorrect = document.getElementById("1_2");
 var derdelettercorrect = document.getElementById("1_3");
 var vierdelettercorrect = document.getElementById("1_4");
 var vijfdelettercorrect = document.getElementById("1_5");
+var zesdelettercorrect = document.getElementById("1_6");
 var counter = 0;
-
-/* Load function when website open's */
-window.onload = function(){
-}
 
 /* Check Button */
 function check(){
@@ -34,15 +32,18 @@ function check(){
 		derdelettergroen = document.getElementById(poging + '_3');
 		vierdelettergroen = document.getElementById(poging + '_4');
 		vijfdelettergroen = document.getElementById(poging + '_5');
+		zesdelettergroen = document.getElementById(poging + '_6');
 
 		tweedeletters = document.getElementById(poging + '_2').value;
 		derdeletters = document.getElementById(poging + '_3').value;
 		vierdeletters = document.getElementById(poging + '_4').value;
 		vijfdeletters = document.getElementById(poging + '_5').value;
+		zesdeletters = document.getElementById(poging + '_6').value;
 		checkLetterById(tweedeletter, poging + '_2');
 		checkLetterById(derdeletter, poging + '_3');
 		checkLetterById(vierdeletter, poging + '_4');
 		checkLetterById(vijfdeletter, poging + '_5');
+		checkLetterById(zesdeletter, poging + '_6');
 		checkCorrectAnswer();
 		poging ++;
 		console.log(poging)
@@ -66,12 +67,20 @@ function checkLetterById(letterToCheck, LetterId) {
 			}
 		else{
 				letterElement.style.backgroundColor = "yellow";
+
 		}
 }
 
 /* Good/Bad Sound */
 function checkCorrectAnswer(){
-	if (eerstelettergroen.style.backgroundColor == "green" && tweedelettergroen.style.backgroundColor == "green" && derdelettergroen.style.backgroundColor == "green" && vierdelettergroen.style.backgroundColor == "green" && vijfdelettergroen.style.backgroundColor == "green"){
+
+	if (tweedelettergroen.style.backgroundColor === "green" 
+		&& derdelettergroen.style.backgroundColor === "green"
+		&& vierdelettergroen.style.backgroundColor === "green"
+		&& vijfdelettergroen.style.backgroundColor === "green"
+		&& zesdelettergroen.style.backgroundColor === "green"
+		){
+		document.getElementById("1_2").setAttribute("readonly", true);
 		var audiogoed = new Audio('sounds/lingo_correct.mp3');
 		audiogoed.play();
 	}
